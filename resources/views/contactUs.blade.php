@@ -14,8 +14,8 @@
 
 <body>
     <div class="container mt-5">
-{{$success}}
-    <form action="" method="post" action="{{ route('contact.store') }}">
+
+    <form  method="post" onsubmit="sendApiRequest()">
     @csrf
 
     <div class="form-group">
@@ -86,7 +86,7 @@
         @endif
     </div>
 
-    <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+    <input type="submit" name="send" value="Submit"  class="btn btn-dark btn-block">
 </form>
     </div>
 </body>
@@ -94,6 +94,7 @@
 </html>
 <script>
 function sendApiRequest (e){
+    event.preventDefault();
     console.log("Hello this on eis working");
 }
 </script>
