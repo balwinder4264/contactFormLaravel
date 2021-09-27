@@ -14,7 +14,7 @@
 
 <body>
     <div class="container mt-5">
-
+{{$success}}
     <form action="" method="post" action="{{ route('contact.store') }}">
     @csrf
 
@@ -92,3 +92,8 @@
 </body>
 
 </html>
+<script>
+function sendApiRequest (e){
+    console.log("Hello this on eis working");
+}
+</script>
